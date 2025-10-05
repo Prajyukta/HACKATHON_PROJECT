@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarv-Drishti Dashboard</title>
+  <link rel="stylesheet" href="home.css">
+  <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Black+Ops+One&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>⚡ Project Sarv-Drishti</h1>
+    <nav>
+            <ul class="navlink">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    <span class="role">Commander</span>
+    <div id="clock"></div>
+  </header>
+
+  <!-- Main Dashboard -->
+  <main class="dashboard">
+    <!-- Left Stats -->
+    <section class="card stats">
+      <h2>Threat Probability</h2>
+      <p class="highlight">82%</p>
+      <p>Active Units: 12</p>
+      <p>Drones in Air: 5</p>
+      <p>Secure Channels: 7</p>
+    </section>
+
+    <!-- Center Chart -->
+    <section class="card chart">
+      <h2 id="typing"></h2>
+      <canvas id="predictionChart"></canvas>
+    </section>
+
+    <!-- Right 3D Model -->
+    <section class="card model">
+      <model-viewer class="background" src="./brahmos.glb" autoplay camera-controls></model-viewer>
+    </section>
+  </main>
+
+  <!-- Bottom -->
+  <footer class="footer">
+    <section class="card threats">
+      <h2>Detected Threats</h2>
+      <ul>
+        <li class="high">🚨 Drone Swarm – High Risk</li>
+        <li class="medium">🚙 Vehicle Convoy – Medium Risk</li>
+      </ul>
+    </section>
+
+    <section class="card recommendations">
+      <h2>AI Recommendations</h2>
+      <p>[14:23] Suggest Drone Interception</p>
+      <p>[14:25] Secure Channel Activated</p>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="home.js"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</body>
